@@ -80,7 +80,7 @@ body {
 }
 
 /* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
+@media (min-width: 991px) {
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
@@ -90,6 +90,6 @@ body {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: calc(100vh-116px);
     }
 }
