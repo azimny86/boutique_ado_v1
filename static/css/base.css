@@ -5,8 +5,8 @@ html {
 body {
     background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px) ;
-    columns: #555;
+    height: calc(100vh - 164px);
+    color: #555;
     font-family: 'Lato';
 }
 
@@ -61,13 +61,13 @@ body {
 }
 
 .overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: #fafafa;
-    z-index: -1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
 }
 
 /* -------------------------------- Media Queries */
@@ -80,7 +80,7 @@ body {
 }
 
 /* fixed top navbar only on medium and up */
-@media (min-width: 991px) {
+@media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
@@ -90,6 +90,17 @@ body {
     }
 
     .header-container {
-        padding-top: calc(100vh-116px);
+        padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }
